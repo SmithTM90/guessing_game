@@ -1,0 +1,21 @@
+<script>
+
+var guess, answer, message;
+
+//Generate random number between 1 and 100
+answer = Math.floor(Math.random() * 100 + 1);
+console.log(answer);
+
+
+
+guess = prompt('I am having people guess a number between 1 and 100 for a chance to win a virtual prize, what is your guess?');
+
+if (guess == answer) {
+  message = "We have a winner! Please visit the pretend female assistant to claim your pretend prize!"
+} else {
+  message = "Oh no! I\'m sorry but that is incorrect, thank you for participating."
+}
+
+alert(message);
+
+</script>
