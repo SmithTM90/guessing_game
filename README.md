@@ -1,3 +1,2 @@
 # guessing_game
-This is the repo for my guessing game assignment.
- My game is straight forward, guess a number from 1 to 100 and win a virtual prize!
+Modified a guessing game that allows user to choose odds of winning, and the ability to choose a prize if they win. After choosing odds user is prompted for their guess. If correct, user is allowed to choose one of three (equally?) great prizes.

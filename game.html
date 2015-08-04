@@ -1,21 +1,47 @@
 <script>
 
-var guess, answer, message;
+//CHB: Expanded game to allow user to choose odds of winning, and the ability to choose a prize if they win. Add variable for likelihood of Success (odds of winning), message 2, and choosePrize.
 
-//Generate random number between 1 and 100
-answer = Math.floor(Math.random() * 100 + 1);
+var guess, answer, message, message2, likelihoodSuccess, choosePrize;
+
+likelihoodSuccess = prompt("I am having people guess a number for a chance to win a virtual prize. If you would like to play, first choose your odds of winning as one in _______");
+
+guess = prompt('Guess a number between 1 and ' + likelihoodSuccess);
+
+//Generate random number between 1 and likelihoodSuccess
+answer = Math.floor(Math.random() * likelihoodSuccess + 1);
 console.log(answer);
 
-
-
-guess = prompt('I am having people guess a number between 1 and 100 for a chance to win a virtual prize, what is your guess?');
-
 if (guess == answer) {
-  message = "We have a winner! Please visit the pretend female assistant to claim your pretend prize!"
+  message = "We have a winner! Please visit the pretend female assistant to claim your prize!";
 } else {
-  message = "Oh no! I\'m sorry but that is incorrect, thank you for participating."
+  message = "Oh no! I\'m sorry but that is incorrect, thank you for participating.";
 }
 
 alert(message);
+
+//Add ability to choose your prize
+
+if (guess == answer){
+
+  choosePrize = prompt("Hi, I'm the pretend female assistant. Choose a number corresponding to your prize: 1) A Stuffed Bear, 2) A Goldfish, or 3) Bottle of Jack Daniels?")
+
+  switch (choosePrize) {
+    case "1":
+    message2 = "Congratulations, and enjoy your stuffed bear!";
+    break;
+    case "2":
+    message2 = "Congratulations, and enjoy your new goldfish!";
+    break;
+    case "3":
+    message2 = "Congratulations, and enioy your Jack Daniels! Don't drink it all in one place.";
+    break;
+
+  }
+
+    alert(message2);
+
+
+}
 
 </script>
