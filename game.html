@@ -1,15 +1,29 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Guess correctly, and win a prize!</title>
+    </head>
+
+      <body>
+        <h1>Step right up and play my game!</h1>
+
+        <p>
+          <ul>
+            <li>First, step on up and select your odds of winning, keep in mind, the prizes are better for making the odds harder for yourself.</li>
+            <li>Secondly, take your best guess at what the random number will be, based on the odds that you set for yourself.</li>
+            <li>If your'e a winner, you may ask our lovely assistant about your prize!</li>
+          </ul>
+        </p>
 <script>
 
-//CHB: Expanded game to allow user to choose odds of winning, and the ability to choose a prize if they win. Add variable for likelihood of Success (odds of winning), message 2, and choosePrize.
+var guess, answer, message, message2, odds, choosePrize;
 
-var guess, answer, message, message2, likelihoodSuccess, choosePrize;
+odds = prompt("I am having people guess a number for a chance to win a virtual prize. If you would like to play, first choose your odds of winning as one in _______");
 
-likelihoodSuccess = prompt("I am having people guess a number for a chance to win a virtual prize. If you would like to play, first choose your odds of winning as one in _______");
+guess = prompt('Guess a number between 1 and ' + odds);
 
-guess = prompt('Guess a number between 1 and ' + likelihoodSuccess);
-
-//Generate random number between 1 and likelihoodSuccess
-answer = Math.floor(Math.random() * likelihoodSuccess + 1);
+//Generate random number between 1 and the variable odds
+answer = Math.floor(Math.random() * odds + 1);
 console.log(answer);
 
 if (guess == answer) {
@@ -21,9 +35,7 @@ if (guess == answer) {
 alert(message);
 
 //Add ability to choose your prize
-
 if (guess == answer){
-
   choosePrize = prompt("Hi, I'm the pretend female assistant. Choose a number corresponding to your prize: 1) A Stuffed Bear, 2) A Goldfish, or 3) Bottle of Jack Daniels?")
 
   switch (choosePrize) {
@@ -36,12 +48,10 @@ if (guess == answer){
     case "3":
     message2 = "Congratulations, and enioy your Jack Daniels! Don't drink it all in one place.";
     break;
-
   }
-
     alert(message2);
-
-
 }
 
 </script>
+      </body>
+  </html>
