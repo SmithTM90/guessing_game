@@ -5,7 +5,8 @@
     </head>
 
       <body>
-        <h1>Step right up and play my game!</h1>
+
+        <h1>Step right up and play my game!<img src = "img/admitone.jpg"></h1>
 
         <p>
           <ul>
@@ -14,55 +15,12 @@
             <li>If your'e a winner, you may ask our lovely assistant about your prize!</li>
           </ul>
         </p>
-<script>
 
-var GuessingGame = function(){
+        <h2 id = "game-outcome">Here is the outcome of your guess.</h2>
 
-  this.gameWelcome = prompt("I am having people guess a number for a chance to win a virtual prize. If you would like to play, first choose your odds of winning as one in _______");
+        <h3 id = "prize-list"></h3>
 
-  this.playGame = function(){
-    prompt('Guess a number between 1 and ' + this.gameWelcome);
-    answer = Math.floor(Math.random() * this.gameWelcome + 1);
-    console.log(answer);
-  };
 
-  this.winGame = function(){
-    if (this.gameWelcome == answer) {
-      message = "We have a winner! Please visit the pretend female assistant to claim your prize!";
-    } else {
-      message = "Oh no! I\'m sorry but that is incorrect, thank you for participating.";
-    }
-
-    alert(message);
-  };
-
-  this.collectPrize = function(){
-    if (this.gameWelcome == answer){
-
-    choosePrize = prompt("Hi, I'm the pretend female assistant. Choose a number corresponding to your prize: 1) A Stuffed Bear, 2) A Goldfish, or 3) Bottle of Jack Daniels?");
-
-    switch (choosePrize) {
-      case "1":
-      message2 = "Congratulations, and enjoy your stuffed bear!";
-      break;
-      case "2":
-      message2 = "Congratulations, and enjoy your new goldfish!";
-      break;
-      case "3":
-      message2 = "Congratulations, and enioy your Jack Daniels! Don't drink it all in one place.";
-      break;
-      }
-    alert(message2);
-    }
-
-  };
-
-};
-var newGame = new GuessingGame();
-    newGame.playGame();
-    newGame.winGame();
-    newGame.collectPrize();
-
-</script>
+        <script src = "js/main.js"></script>
       </body>
   </html>
